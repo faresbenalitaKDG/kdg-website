@@ -9,7 +9,7 @@ export default function ThemeScript() {
         __html: `
           (function() {
             var theme = localStorage.getItem('theme');
-            if (theme === 'dark') {
+            if (theme !== 'light') {
               document.documentElement.classList.add('dark');
             } else {
               document.documentElement.classList.remove('dark');
