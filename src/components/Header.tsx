@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const navItems = [
   { href: "#home", label: "Home" },
@@ -23,21 +24,23 @@ export default function Header() {
         >
           KdG Onboarding
         </Link>
-        <ul className="hidden items-center gap-8 md:flex">
-          {navItems.map((item) => (
-            <li key={item.href}>
-              <Link
-                href={item.href}
-                className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-              >
-                {item.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-        <button
-          type="button"
-          className="flex flex-col gap-1.5 p-2 md:hidden"
+        <div className="flex items-center gap-2">
+          <ul className="hidden items-center gap-8 md:flex">
+            {navItems.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <ThemeToggle />
+          <button
+            type="button"
+            className="flex flex-col gap-1.5 p-2 md:hidden"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -57,6 +60,7 @@ export default function Header() {
             }`}
           />
         </button>
+        </div>
       </nav>
       {mobileMenuOpen && (
         <div className="border-t border-zinc-200 bg-white px-6 py-4 dark:border-zinc-800 dark:bg-zinc-950 md:hidden">
