@@ -11,11 +11,12 @@ export default function Header() {
   const { t } = useLanguage();
 
   const navItems = [
-    { href: "#home", label: t.nav.home },
-    { href: "#about", label: t.nav.about },
-    { href: "#features", label: t.nav.features },
-    { href: "#team", label: t.nav.team },
-    { href: "#blog", label: t.nav.blog },
+    { href: "/#home", label: t.nav.home },
+    { href: "/#about", label: t.nav.about },
+    { href: "/#features", label: t.nav.features },
+    { href: "/#blog", label: t.nav.blog },
+    { href: "/#conference", label: t.nav.conference },
+    { href: "/#team", label: t.nav.team },
   ];
 
   return (
@@ -24,7 +25,7 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <LanguageToggle />
           <Link
-            href="#home"
+            href="/#home"
             className="text-xl font-semibold tracking-tight text-zinc-900 dark:text-white"
           >
             KdG Onboarding

@@ -5,11 +5,11 @@ import { useLanguage } from "@/context/LanguageContext";
 const teamData = [
   {
     linkedin: "https://www.linkedin.com/in/fares-ben-8a8b93254/",
-    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=1",
+    image: "/fares.jpg",
   },
   {
     linkedin: "https://www.linkedin.com/in/eren-beyazit-baa1bb1b0/",
-    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=2",
+    image: "/eren.jpg",
   },
   {
     linkedin: "https://www.linkedin.com/in/haider-al-lami-851b54352/",

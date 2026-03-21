@@ -7,7 +7,7 @@ export default function Conference() {
   const { t } = useLanguage();
 
   return (
-    <section className="bg-zinc-900 px-6 py-24 text-white">
+    <section id="conference" className="bg-zinc-900 px-6 py-24 text-white">
       <div className="mx-auto max-w-6xl">
         <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-zinc-400">
           {t.conference.tagline}

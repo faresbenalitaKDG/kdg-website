@@ -37,7 +37,7 @@ export default function Blog() {
               </div>
               <div className="p-6">
                 <h3 className="mb-2 text-lg font-semibold text-zinc-900 dark:text-white">
-                  <Link href={`#blog`} className="hover:underline">
+                  <Link href={`/blog/${post.slug}`} className="hover:underline">
                     {post.title}
                   </Link>
                 </h3>
@@ -48,7 +48,7 @@ export default function Blog() {
                   {post.excerpt}
                 </p>
                 <Link
-                  href={`#blog`}
+                  href={`/blog/${post.slug}`}
                   className="text-sm font-medium text-zinc-900 hover:underline dark:text-white"
                 >
                   {t.blog.readMore}
