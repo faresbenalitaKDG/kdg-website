@@ -1,25 +1,19 @@
+"use client";
+
+import { useLanguage } from "@/context/LanguageContext";
+
 export default function Features() {
+  const { t } = useLanguage();
+
   const features = [
+    { title: t.features.modules.title, description: t.features.modules.desc },
+    { title: t.features.tasks.title, description: t.features.tasks.desc },
     {
-      title: "Modules",
-      description: "Gestructureerde leerpaden met duidelijke stappen en voortgang.",
+      title: t.features.virtualTours.title,
+      description: t.features.virtualTours.desc,
     },
-    {
-      title: "Taken",
-      description: "Beheersbare taken met deadlines en herinneringen.",
-    },
-    {
-      title: "Virtual Tours",
-      description: "Interactieve rondleidingen door de werkplek en faciliteiten.",
-    },
-    {
-      title: "Analytics",
-      description: "Inzicht in voortgang en engagement van nieuwe medewerkers.",
-    },
-    {
-      title: "FAQ",
-      description: "Centrale kennisbank met veelgestelde vragen en antwoorden.",
-    },
+    { title: t.features.analytics.title, description: t.features.analytics.desc },
+    { title: t.features.faq.title, description: t.features.faq.desc },
   ];
 
   return (
@@ -29,10 +23,10 @@ export default function Features() {
     >
       <div className="mx-auto max-w-6xl">
         <h2 className="mb-4 text-3xl font-bold tracking-tight text-zinc-900 dark:text-white sm:text-4xl">
-          Key features
+          {t.features.title}
         </h2>
         <p className="mb-16 max-w-2xl text-lg text-zinc-600 dark:text-zinc-400">
-          Alles wat je nodig hebt voor een succesvolle onboarding in één platform.
+          {t.features.subtitle}
         </p>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, i) => (

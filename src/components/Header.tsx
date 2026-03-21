@@ -3,27 +3,33 @@
 import Link from "next/link";
 import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
-
-const navItems = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#features", label: "Features" },
-  { href: "#team", label: "Team" },
-  { href: "#blog", label: "Blog" },
-];
+import LanguageToggle from "./LanguageToggle";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { t } = useLanguage();
+
+  const navItems = [
+    { href: "#home", label: t.nav.home },
+    { href: "#about", label: t.nav.about },
+    { href: "#features", label: t.nav.features },
+    { href: "#team", label: t.nav.team },
+    { href: "#blog", label: t.nav.blog },
+  ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-zinc-200/80 dark:bg-zinc-950/95 dark:border-zinc-800/80">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link
-          href="#home"
-          className="text-xl font-semibold tracking-tight text-zinc-900 dark:text-white"
-        >
-          KdG Onboarding
-        </Link>
+        <div className="flex items-center gap-4">
+          <LanguageToggle />
+          <Link
+            href="#home"
+            className="text-xl font-semibold tracking-tight text-zinc-900 dark:text-white"
+          >
+            KdG Onboarding
+          </Link>
+        </div>
         <div className="flex items-center gap-2">
           <ul className="hidden items-center gap-8 md:flex">
             {navItems.map((item) => (
