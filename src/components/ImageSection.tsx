@@ -12,6 +12,7 @@ export default function ImageSection() {
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 1200px"
             priority
+            unoptimized
           />
         </div>
       </div>

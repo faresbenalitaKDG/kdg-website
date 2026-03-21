@@ -25,7 +25,7 @@ export default function Conference() {
             </h3>
             <p className="mb-8 text-zinc-300">{t.conference.registerDesc}</p>
             <Link
-              href="https://forms.office.com/e/EDuNpECtxi"
+              href="https://www.eventbrite.be/e/it-student-conference-2026-tickets-1983939808373"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-base font-medium text-zinc-900 transition-colors hover:bg-zinc-200"

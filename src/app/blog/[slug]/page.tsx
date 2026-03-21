@@ -13,6 +13,8 @@ const blogImages: Record<string, string> = {
     "https://placehold.co/800x400/1f2937/9ca3af?text=Virtual+Tours",
   "project-learnings":
     "https://placehold.co/800x400/1f2937/9ca3af?text=Learnings",
+  "why-onboarding-is-harder":
+    "https://placehold.co/800x400/1f2937/9ca3af?text=Why+Onboarding+Is+Harder",
 };
 
 export default function BlogPostPage() {

@@ -8,6 +8,7 @@ const blogImages = [
   "https://placehold.co/600x400/1f2937/9ca3af?text=Tech+Stack",
   "https://placehold.co/600x400/1f2937/9ca3af?text=Virtual+Tours",
   "https://placehold.co/600x400/1f2937/9ca3af?text=Learnings",
+  "https://placehold.co/600x400/1f2937/9ca3af?text=Why+Onboarding+Is+Harder",
 ];
 
 export default function Blog() {

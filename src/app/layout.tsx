@@ -26,9 +26,10 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${inter.variable} h-full antialiased scroll-smooth`}
+      suppressHydrationWarning
     >
-      <ThemeScript />
       <body className="min-h-full flex flex-col bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100">
+        <ThemeScript />
         <LanguageProvider>
           <Header />
           <main className="flex-1">{children}</main>
