@@ -20,7 +20,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-zinc-200/80 dark:bg-zinc-950/95 dark:border-zinc-800/80">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-zinc-200/80 bg-white/95 shadow-sm backdrop-blur-sm transition-shadow dark:border-zinc-800/80 dark:bg-zinc-950/95">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <div className="flex items-center gap-4">
           <LanguageToggle />
@@ -37,7 +37,7 @@ export default function Header() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                  className="link-underline text-sm font-medium text-zinc-600 transition-colors hover:text-indigo-600 dark:text-zinc-400 dark:hover:text-indigo-400"
                 >
                   {item.label}
                 </Link>
@@ -76,7 +76,7 @@ export default function Header() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="block text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                  className="link-underline block text-sm font-medium text-zinc-600 transition-colors hover:text-indigo-600 dark:text-zinc-400 dark:hover:text-indigo-400"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}

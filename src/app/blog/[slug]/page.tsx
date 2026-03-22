@@ -45,12 +45,12 @@ export default function BlogPostPage() {
       <div className="mx-auto max-w-3xl px-6 pt-24 pb-24">
         <Link
           href="/#blog"
-          className="mb-8 inline-block text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+          className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-zinc-600 transition-colors hover:text-indigo-600 dark:text-zinc-400 dark:hover:text-indigo-400"
         >
           ← {t.blog.backToBlog}
         </Link>
         <header className="mb-12">
-          <h1 className="mb-4 text-4xl font-bold tracking-tight text-zinc-900 dark:text-white sm:text-5xl">
+          <h1 className="mb-4 font-[family-name:var(--font-jakarta)] text-4xl font-bold tracking-tight text-zinc-900 dark:text-white sm:text-5xl">
             {post.title}
           </h1>
           <p className="text-zinc-500 dark:text-zinc-400">
@@ -64,7 +64,7 @@ export default function BlogPostPage() {
             className="h-full w-full object-cover"
           />
         </div>
-        <div className="prose prose-zinc dark:prose-invert max-w-none">
+        <div className="prose prose-zinc prose-drop-cap dark:prose-invert max-w-none">
           {post.content.map((paragraph, i) => (
             <p
               key={i}

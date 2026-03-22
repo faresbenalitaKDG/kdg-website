@@ -158,6 +158,10 @@ export const translations = {
     },
     footer: {
       copyright: "© {year} KdG Onboarding Platform. Powered by Karel de Grote Hogeschool.",
+      quickLinks: "Quick Links",
+      followUs: "Follow",
+      linkedin: "LinkedIn",
+      website: "KdG website",
     },
   },
   nl: {
@@ -319,6 +323,10 @@ export const translations = {
     },
     footer: {
       copyright: "© {year} KdG Onboarding Platform. Powered by Karel de Grote Hogeschool.",
+      quickLinks: "Snelle links",
+      followUs: "Volg ons",
+      linkedin: "LinkedIn",
+      website: "KdG-website",
     },
   },
 } as const;

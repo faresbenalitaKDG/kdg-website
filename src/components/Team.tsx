@@ -26,39 +26,43 @@ export default function Team() {
       className="bg-white px-6 py-24 dark:bg-zinc-950"
     >
       <div className="mx-auto max-w-6xl">
-        <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
+        <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-indigo-600 dark:text-indigo-400">
           {t.team.tagline}
         </p>
-        <h2 className="mb-4 text-3xl font-bold tracking-tight text-zinc-900 dark:text-white sm:text-4xl">
+        <div className="mb-4 h-1 w-12 rounded-full bg-indigo-500" />
+        <h2 className="mb-4 font-[family-name:var(--font-jakarta)] text-3xl font-bold tracking-tight text-zinc-900 dark:text-white sm:text-4xl">
           {t.team.title}
         </h2>
         <p className="mb-16 max-w-2xl text-lg text-zinc-600 dark:text-zinc-400">
           {t.team.subtitle}
         </p>
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {t.team.members.map((member, i) => (
-            <div key={i} className="text-center">
-              <div className="relative mx-auto mb-4 aspect-square w-32 overflow-hidden rounded-full bg-zinc-200 dark:bg-zinc-800">
+            <div
+              key={i}
+              className="group rounded-xl border border-zinc-200 bg-zinc-50 p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-900"
+            >
+              <div className="relative mx-auto mb-6 aspect-square w-36 overflow-hidden rounded-full bg-zinc-200 ring-4 ring-white shadow-lg dark:bg-zinc-800 dark:ring-zinc-900">
                 <img
                   src={teamData[i].image}
                   alt={member.name}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
-              <h3 className="mb-1 text-lg font-semibold text-zinc-900 dark:text-white">
+              <h3 className="mb-2 font-[family-name:var(--font-jakarta)] text-lg font-semibold text-zinc-900 dark:text-white">
                 {member.name}
               </h3>
-              <p className="mb-3 text-sm text-zinc-500 dark:text-zinc-400">
+              <p className="mb-4 text-sm text-indigo-600 dark:text-indigo-400">
                 {member.role}
               </p>
-              <p className="mb-4 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+              <p className="mb-6 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
                 {member.bio}
               </p>
               <a
                 href={teamData[i].linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-lg border border-zinc-300 bg-white p-2 transition-colors hover:bg-zinc-50 dark:border-zinc-600 dark:bg-zinc-800 dark:hover:bg-zinc-700"
+                className="inline-flex items-center justify-center rounded-lg border border-zinc-300 bg-white p-2.5 transition-all duration-300 hover:-translate-y-0.5 hover:border-indigo-300 hover:bg-indigo-50 hover:shadow-md dark:border-zinc-600 dark:bg-zinc-800 dark:hover:border-indigo-600 dark:hover:bg-indigo-900/20"
                 aria-label={`${member.name} on LinkedIn`}
               >
                 <svg
