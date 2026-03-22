@@ -13,7 +13,7 @@ const teamData = [
   },
   {
     linkedin: "https://www.linkedin.com/in/haider-al-lami-851b54352/",
-    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=3",
+    image: "/haider.jpg",
   },
 ];
 
