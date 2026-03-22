@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 import LanguageToggle from "./LanguageToggle";
@@ -26,9 +27,17 @@ export default function Header() {
           <LanguageToggle />
           <Link
             href="/#home"
-            className="text-xl font-semibold tracking-tight text-zinc-900 dark:text-white"
+            className="flex items-center"
+            aria-label="KdG Onboarding - Home"
           >
-            KdG Onboarding
+            <Image
+              src="/kdg-logo.png"
+              alt="KdG Onboarding"
+              width={140}
+              height={40}
+              className="h-8 w-auto invert dark:invert-0"
+              priority
+            />
           </Link>
         </div>
         <div className="flex items-center gap-2">
